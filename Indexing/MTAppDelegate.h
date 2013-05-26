@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MTPreferencesWindowController.h"
 
 @interface MTAppDelegate : NSObject <NSApplicationDelegate>
 

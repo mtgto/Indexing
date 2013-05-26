@@ -14,6 +14,9 @@
 		CEC65C5C1751E6CD0023C1C8 /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C5B1751E6CD0023C1C8 /* MTAppDelegate.m */; };
 		CEC65C5F1751E6CD0023C1C8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C5D1751E6CD0023C1C8 /* MainMenu.xib */; };
 		CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */; };
+		CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */; };
+		CEC65C71175246760023C1C8 /* MTPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */; };
+		CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C731752486C0023C1C8 /* YellowPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,11 @@
 		CEC65C5B1751E6CD0023C1C8 /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
 		CEC65C5E1751E6CD0023C1C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CEC65C611751E6CD0023C1C8 /* Indexing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Indexing.xcdatamodel; sourceTree = "<group>"; };
+		CEC65C6D175246760023C1C8 /* MTPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPreferencesWindowController.h; sourceTree = "<group>"; };
+		CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPreferencesWindowController.m; sourceTree = "<group>"; };
+		CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTPreferencesWindowController.xib; sourceTree = "<group>"; };
+		CEC65C721752486C0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
+		CEC65C731752486C0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,11 @@
 				CEC65C5A1751E6CD0023C1C8 /* MTAppDelegate.h */,
 				CEC65C5B1751E6CD0023C1C8 /* MTAppDelegate.m */,
 				CEC65C5D1751E6CD0023C1C8 /* MainMenu.xib */,
+				CEC65C6D175246760023C1C8 /* MTPreferencesWindowController.h */,
+				CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */,
+				CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */,
+				CEC65C721752486C0023C1C8 /* YellowPage.h */,
+				CEC65C731752486C0023C1C8 /* YellowPage.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
 				CEC65C4F1751E6CD0023C1C8 /* Supporting Files */,
 			);
@@ -160,6 +173,7 @@
 				CEC65C531751E6CD0023C1C8 /* InfoPlist.strings in Resources */,
 				CEC65C591751E6CD0023C1C8 /* Credits.rtf in Resources */,
 				CEC65C5F1751E6CD0023C1C8 /* MainMenu.xib in Resources */,
+				CEC65C71175246760023C1C8 /* MTPreferencesWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +187,8 @@
 				CEC65C551751E6CD0023C1C8 /* main.m in Sources */,
 				CEC65C5C1751E6CD0023C1C8 /* MTAppDelegate.m in Sources */,
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
+				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
+				CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
