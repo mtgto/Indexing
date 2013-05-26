@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "YellowPage.h"
 
 @interface MTPreferencesWindowController : NSWindowController
 @property (strong) IBOutlet NSArrayController *yellowPageArrayController;
