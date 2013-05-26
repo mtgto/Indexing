@@ -1,0 +1,21 @@
+//
+//  MTAppDelegate.h
+//  Indexing
+//
+//  Created by mtgto on 5/26/13.
+//  Copyright (c) 2013 mtgto. All rights reserved.
+//
+
+#import <Cocoa/Cocoa.h>
+
+@interface MTAppDelegate : NSObject <NSApplicationDelegate>
+
+@property (assign) IBOutlet NSWindow *window;
+
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+- (IBAction)saveAction:(id)sender;
+
+@end
