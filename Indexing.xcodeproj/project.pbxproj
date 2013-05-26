@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7176A0B13844138F972476 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BF258C7D334BCF950CB1EE /* libPods-Tests.a */; };
+		42953255FB80435480383813 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 563DE9D639BC439D83F36EC0 /* libPods.a */; };
 		CEC65C491751E6CD0023C1C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC65C481751E6CD0023C1C8 /* Cocoa.framework */; };
 		CEC65C531751E6CD0023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C511751E6CD0023C1C8 /* InfoPlist.strings */; };
 		CEC65C551751E6CD0023C1C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C541751E6CD0023C1C8 /* main.m */; };
@@ -17,9 +19,16 @@
 		CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */; };
 		CEC65C71175246760023C1C8 /* MTPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */; };
 		CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C731752486C0023C1C8 /* YellowPage.m */; };
+		CEC65CB5175259560023C1C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC65C481751E6CD0023C1C8 /* Cocoa.framework */; };
+		CEC65CBB175259560023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CB9175259560023C1C8 /* InfoPlist.strings */; };
+		CEC65CCE175259E10023C1C8 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEC65CD117525CB60023C1C8 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD017525CB60023C1C8 /* MyTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		563DE9D639BC439D83F36EC0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8254BF72E1C5457A955CBFAA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		A4BF258C7D334BCF950CB1EE /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC65C451751E6CD0023C1C8 /* Indexing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indexing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC65C481751E6CD0023C1C8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CEC65C4B1751E6CD0023C1C8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -39,6 +48,13 @@
 		CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTPreferencesWindowController.xib; sourceTree = "<group>"; };
 		CEC65C721752486C0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
 		CEC65C731752486C0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
+		CEC65CB4175259560023C1C8 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC65CB8175259560023C1C8 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		CEC65CBA175259560023C1C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEC65CBE175259560023C1C8 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
+		CEC65CD017525CB60023C1C8 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
+		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC65C491751E6CD0023C1C8 /* Cocoa.framework in Frameworks */,
+				42953255FB80435480383813 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC65CB1175259560023C1C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC65CB5175259560023C1C8 /* Cocoa.framework in Frameworks */,
+				2D7176A0B13844138F972476 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				CEC65C4E1751E6CD0023C1C8 /* Indexing */,
+				CEC65CB6175259560023C1C8 /* Tests */,
 				CEC65C471751E6CD0023C1C8 /* Frameworks */,
 				CEC65C461751E6CD0023C1C8 /* Products */,
+				8254BF72E1C5457A955CBFAA /* Pods.xcconfig */,
+				F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC65C451751E6CD0023C1C8 /* Indexing.app */,
+				CEC65CB4175259560023C1C8 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +105,8 @@
 			children = (
 				CEC65C481751E6CD0023C1C8 /* Cocoa.framework */,
 				CEC65C4A1751E6CD0023C1C8 /* Other Frameworks */,
+				563DE9D639BC439D83F36EC0 /* libPods.a */,
+				A4BF258C7D334BCF950CB1EE /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +150,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CEC65CB6175259560023C1C8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEC65CD017525CB60023C1C8 /* MyTest.m */,
+				CEC65CB7175259560023C1C8 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CEC65CB7175259560023C1C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEC65CB8175259560023C1C8 /* Tests-Info.plist */,
+				CEC65CB9175259560023C1C8 /* InfoPlist.strings */,
+				CEC65CBE175259560023C1C8 /* Tests-Prefix.pch */,
+				CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC65C651751E6CD0023C1C8 /* Build configuration list for PBXNativeTarget "Indexing" */;
 			buildPhases = (
+				A138164796C84E6CB047B8D7 /* Check Pods Manifest.lock */,
 				CEC65C411751E6CD0023C1C8 /* Sources */,
 				CEC65C421751E6CD0023C1C8 /* Frameworks */,
 				CEC65C431751E6CD0023C1C8 /* Resources */,
+				CC6D309266524CB588672910 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +190,25 @@
 			name = Indexing;
 			productName = Indexing;
 			productReference = CEC65C451751E6CD0023C1C8 /* Indexing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEC65CB3175259560023C1C8 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEC65CCC175259560023C1C8 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				B37E0D086EF74C44B76BE8BC /* Check Pods Manifest.lock */,
+				CEC65CB0175259560023C1C8 /* Sources */,
+				CEC65CB1175259560023C1C8 /* Frameworks */,
+				CEC65CB2175259560023C1C8 /* Resources */,
+				A011B7F01B554E588F4F6BB1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = CEC65CB4175259560023C1C8 /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,6 +234,7 @@
 			projectRoot = "";
 			targets = (
 				CEC65C441751E6CD0023C1C8 /* Indexing */,
+				CEC65CB3175259560023C1C8 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,7 +251,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEC65CB2175259560023C1C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC65CBB175259560023C1C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A011B7F01B554E588F4F6BB1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+		};
+		A138164796C84E6CB047B8D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		B37E0D086EF74C44B76BE8BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		CC6D309266524CB588672910 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEC65C411751E6CD0023C1C8 /* Sources */ = {
@@ -189,6 +330,15 @@
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
 				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
 				CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC65CB0175259560023C1C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC65CCE175259E10023C1C8 /* GHUnitTestMain.m in Sources */,
+				CEC65CD117525CB60023C1C8 /* MyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +367,14 @@
 				CEC65C5E1751E6CD0023C1C8 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CEC65CB9175259560023C1C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEC65CBA175259560023C1C8 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,6 +441,7 @@
 		};
 		CEC65C661751E6CD0023C1C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8254BF72E1C5457A955CBFAA /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -295,11 +454,38 @@
 		};
 		CEC65C671751E6CD0023C1C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8254BF72E1C5457A955CBFAA /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Indexing/Indexing-Prefix.pch";
 				INFOPLIST_FILE = "Indexing/Indexing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CEC65CCA175259560023C1C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEC65CCB175259560023C1C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -324,6 +510,16 @@
 				CEC65C671751E6CD0023C1C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEC65CCC175259560023C1C8 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEC65CCA175259560023C1C8 /* Debug */,
+				CEC65CCB175259560023C1C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
