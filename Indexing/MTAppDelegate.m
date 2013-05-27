@@ -7,6 +7,11 @@
 //
 
 #import "MTAppDelegate.h"
+#import "MTMainWindowController.h"
+
+@interface MTAppDelegate ()
+@property (strong) MTMainWindowController *mainWindowController;
+@end
 
 @implementation MTAppDelegate
 
@@ -17,6 +22,8 @@
 {
     // Insert code here to initialize your application
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"indexing"];
+    self.mainWindowController = [[MTMainWindowController alloc] initWithWindowNibName:@"MTMainWindowController"];
+    [self.mainWindowController showWindow:self];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "net.mtgto.Indexing" in the user's Application Support directory.

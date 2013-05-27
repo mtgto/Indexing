@@ -23,6 +23,9 @@
 		CEC65CBB175259560023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CB9175259560023C1C8 /* InfoPlist.strings */; };
 		CEC65CCE175259E10023C1C8 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEC65CD117525CB60023C1C8 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD017525CB60023C1C8 /* MyTest.m */; };
+		CEC65CD417539AB90023C1C8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD317539AB90023C1C8 /* Channel.m */; };
+		CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */; };
+		CEC65CD91753A0100023C1C8 /* MTMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,11 @@
 		CEC65CBE175259560023C1C8 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
 		CEC65CD017525CB60023C1C8 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
+		CEC65CD217539AB80023C1C8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		CEC65CD317539AB90023C1C8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		CEC65CD51753A00F0023C1C8 /* MTMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainWindowController.h; sourceTree = "<group>"; };
+		CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainWindowController.m; sourceTree = "<group>"; };
+		CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMainWindowController.xib; sourceTree = "<group>"; };
 		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -127,11 +135,16 @@
 				CEC65C5A1751E6CD0023C1C8 /* MTAppDelegate.h */,
 				CEC65C5B1751E6CD0023C1C8 /* MTAppDelegate.m */,
 				CEC65C5D1751E6CD0023C1C8 /* MainMenu.xib */,
+				CEC65CD51753A00F0023C1C8 /* MTMainWindowController.h */,
+				CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */,
+				CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */,
 				CEC65C6D175246760023C1C8 /* MTPreferencesWindowController.h */,
 				CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */,
 				CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */,
 				CEC65C721752486C0023C1C8 /* YellowPage.h */,
 				CEC65C731752486C0023C1C8 /* YellowPage.m */,
+				CEC65CD217539AB80023C1C8 /* Channel.h */,
+				CEC65CD317539AB90023C1C8 /* Channel.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
 				CEC65C4F1751E6CD0023C1C8 /* Supporting Files */,
 			);
@@ -248,6 +261,7 @@
 				CEC65C591751E6CD0023C1C8 /* Credits.rtf in Resources */,
 				CEC65C5F1751E6CD0023C1C8 /* MainMenu.xib in Resources */,
 				CEC65C71175246760023C1C8 /* MTPreferencesWindowController.xib in Resources */,
+				CEC65CD91753A0100023C1C8 /* MTMainWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,8 @@
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
 				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
 				CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */,
+				CEC65CD417539AB90023C1C8 /* Channel.m in Sources */,
+				CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
