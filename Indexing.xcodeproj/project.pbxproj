@@ -18,7 +18,6 @@
 		CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */; };
 		CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */; };
 		CEC65C71175246760023C1C8 /* MTPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */; };
-		CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C731752486C0023C1C8 /* YellowPage.m */; };
 		CEC65CB5175259560023C1C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC65C481751E6CD0023C1C8 /* Cocoa.framework */; };
 		CEC65CBB175259560023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CB9175259560023C1C8 /* InfoPlist.strings */; };
 		CEC65CCE175259E10023C1C8 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -26,6 +25,7 @@
 		CEC65CD417539AB90023C1C8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD317539AB90023C1C8 /* Channel.m */; };
 		CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */; };
 		CEC65CD91753A0100023C1C8 /* MTMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */; };
+		CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CDB1753C06A0023C1C8 /* YellowPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,6 @@
 		CEC65C6D175246760023C1C8 /* MTPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPreferencesWindowController.h; sourceTree = "<group>"; };
 		CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPreferencesWindowController.m; sourceTree = "<group>"; };
 		CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTPreferencesWindowController.xib; sourceTree = "<group>"; };
-		CEC65C721752486C0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
-		CEC65C731752486C0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
 		CEC65CB4175259560023C1C8 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC65CB8175259560023C1C8 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		CEC65CBA175259560023C1C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -62,6 +60,8 @@
 		CEC65CD51753A00F0023C1C8 /* MTMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainWindowController.h; sourceTree = "<group>"; };
 		CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainWindowController.m; sourceTree = "<group>"; };
 		CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMainWindowController.xib; sourceTree = "<group>"; };
+		CEC65CDA1753C06A0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
+		CEC65CDB1753C06A0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
 		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				CEC65C4E1751E6CD0023C1C8 /* Indexing */,
-				CEC65CB6175259560023C1C8 /* Tests */,
 				CEC65C471751E6CD0023C1C8 /* Frameworks */,
 				CEC65C461751E6CD0023C1C8 /* Products */,
 				8254BF72E1C5457A955CBFAA /* Pods.xcconfig */,
@@ -141,10 +140,11 @@
 				CEC65C6D175246760023C1C8 /* MTPreferencesWindowController.h */,
 				CEC65C6E175246760023C1C8 /* MTPreferencesWindowController.m */,
 				CEC65C6F175246760023C1C8 /* MTPreferencesWindowController.xib */,
-				CEC65C721752486C0023C1C8 /* YellowPage.h */,
-				CEC65C731752486C0023C1C8 /* YellowPage.m */,
+				CEC65CB6175259560023C1C8 /* Tests */,
 				CEC65CD217539AB80023C1C8 /* Channel.h */,
 				CEC65CD317539AB90023C1C8 /* Channel.m */,
+				CEC65CDA1753C06A0023C1C8 /* YellowPage.h */,
+				CEC65CDB1753C06A0023C1C8 /* YellowPage.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
 				CEC65C4F1751E6CD0023C1C8 /* Supporting Files */,
 			);
@@ -169,7 +169,8 @@
 				CEC65CD017525CB60023C1C8 /* MyTest.m */,
 				CEC65CB7175259560023C1C8 /* Supporting Files */,
 			);
-			path = Tests;
+			name = Tests;
+			path = ../Tests;
 			sourceTree = "<group>";
 		};
 		CEC65CB7175259560023C1C8 /* Supporting Files */ = {
@@ -343,9 +344,9 @@
 				CEC65C5C1751E6CD0023C1C8 /* MTAppDelegate.m in Sources */,
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
 				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
-				CEC65C741752486C0023C1C8 /* YellowPage.m in Sources */,
 				CEC65CD417539AB90023C1C8 /* Channel.m in Sources */,
 				CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */,
+				CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"indexing"];
     self.mainWindowController = [[MTMainWindowController alloc] initWithWindowNibName:@"MTMainWindowController"];
     [self.mainWindowController showWindow:self];
