@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface MTMainWindowController : NSWindowController
+@interface MTMainWindowController : NSWindowController<NSOutlineViewDataSource, NSOutlineViewDelegate>
+
+@property (nonatomic, strong) NSArray *topLevelItems;
+@property (nonatomic, strong) NSDictionary *childrenDictionary;
+@property (weak) IBOutlet NSOutlineView *bookmarkOutlineView;
+
+- (IBAction)reload:(id)sender;
 
 @end
