@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSArray *topLevelItems;
 @property (nonatomic, strong) NSDictionary *childrenDictionary;
 @property (weak) IBOutlet NSOutlineView *bookmarkOutlineView;
+@property (strong) IBOutlet NSArrayController *channelArrayController;
+@property (weak) IBOutlet NSTableView *channelTableView;
 
 - (IBAction)reload:(id)sender;
 

@@ -44,6 +44,10 @@
 }
 
 - (IBAction)reload:(id)sender {
+    NSDictionary *value = @{@"name": @"ch1", @"genre": @"genre1"};
+//    [self.channelArrayController addObject:value];
+    [self.channelArrayController setContent:@[value]];
+    [self.channelTableView reloadData];
 }
 
 - (NSArray *)_childrenForItem:(id)item {
