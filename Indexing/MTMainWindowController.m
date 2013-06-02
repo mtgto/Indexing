@@ -8,6 +8,7 @@
 
 #import "MTMainWindowController.h"
 #import "MTYellowPageClient.h"
+#import "YellowPage.h"
 
 @interface MTMainWindowController ()
 
@@ -31,8 +32,8 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     self.topLevelItems = @[@"YP", @"Bookmarks"];
-    self.childrenDictionary = @{@"YP": @[@"All", @"YP1", @"YP2"],
-                                @"Bookmarks": @[@"ContentView1", @"ContentView2", @"ContentView3"]};
+    self.yellowPages = [[YellowPage MR_findAll] mutableCopy];
+    self.channelDictionary = [NSMutableDictionary dictionary];
     [self.bookmarkOutlineView sizeLastColumnToFit];
     [self.bookmarkOutlineView reloadData];
     [self.bookmarkOutlineView setFloatsGroupRows:NO];
@@ -42,20 +43,30 @@
     [[NSAnimationContext currentContext] setDuration:0];
     [self.bookmarkOutlineView expandItem:nil expandChildren:YES];
     [NSAnimationContext endGrouping];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(managedObjectChanged:)
+                                                 name:NSManagedObjectContextObjectsDidChangeNotification
+                                               object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSManagedObjectContextObjectsDidChangeNotification
+                                                  object:nil];
 }
 
 - (IBAction)reload:(id)sender {
-//    NSDictionary *value = @{@"name": @"ch1", @"genre": @"genre1"};
-////    [self.channelArrayController addObject:value];
-//    [self.channelArrayController setContent:@[value]];
-//    [self.channelTableView reloadData];
-    NSURL *url = [NSURL URLWithString:@"http://localhost/~user/index.txt"];
-    [[[MTYellowPageClient alloc] init] getChannelsByURL:url success:^(NSArray *channels) {
-        DDLogInfo(@"channels = %@", channels);
-        [self.channelArrayController setContent:channels];
-    } failure:^(NSError *error) {
-        DDLogWarn(@"error = %@", error);
-    }];
+    for (YellowPage *yp in self.yellowPages) {
+        NSURL *url = [NSURL URLWithString:@"index.txt" relativeToURL:[NSURL URLWithString:yp.url]];
+        [[[MTYellowPageClient alloc] init] getChannelsByURL:url success:^(NSArray *channels) {
+            DDLogInfo(@"yp[%@] channels = %@", yp.name, channels);
+            self.channelDictionary[yp.name] = channels;
+            //[self.channelArrayController setContent:channels];
+        } failure:^(NSError *error) {
+            DDLogWarn(@"error = %@", error);
+        }];
+    }
 }
 
 - (NSArray *)_childrenForItem:(id)item {
@@ -63,7 +74,7 @@
     if (item == nil) {
         children = self.topLevelItems;
     } else {
-        children = [self.childrenDictionary objectForKey:item];
+        children = self.yellowPages;
     }
     return children;
 }
@@ -129,7 +140,8 @@
         // The cell is setup in IB. The textField and imageView outlets are properly setup.
         // Special attributes are automatically applied by NSTableView/NSOutlineView for the source list
         NSTableCellView *result = [outlineView makeViewWithIdentifier:@"DataCell" owner:self];
-        result.textField.stringValue = item;
+        YellowPage *yp = (YellowPage *)item;
+        result.textField.stringValue = yp.name;
         // Setup the icon based on our section
         id parent = [outlineView parentForItem:item];
         NSInteger index = [_topLevelItems indexOfObject:parent];
@@ -154,6 +166,22 @@
         }
         return result;
     }
+}
+
+#pragma mark - Notification
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
+    DDLogInfo(@"outlineViewSelectionDidChange:%@", [self.bookmarkOutlineView itemAtRow:self.bookmarkOutlineView.selectedRow]);
+    YellowPage *yp = [self.bookmarkOutlineView itemAtRow:self.bookmarkOutlineView.selectedRow];
+    NSArray *channels = self.channelDictionary[yp.name];
+    if (channels) {
+        [self.channelArrayController setContent:channels];
+    }
+}
+
+- (void)managedObjectChanged:(NSNotification *)notification {
+    DDLogInfo(@"managedObjectChanged: %@", [notification userInfo]);
+    self.yellowPages = [NSMutableArray arrayWithArray:[YellowPage MR_findAll]];
+    [self.bookmarkOutlineView reloadData];
 }
 
 @end

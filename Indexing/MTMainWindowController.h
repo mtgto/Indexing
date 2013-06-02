@@ -11,7 +11,8 @@
 @interface MTMainWindowController : NSWindowController<NSOutlineViewDataSource, NSOutlineViewDelegate>
 
 @property (nonatomic, strong) NSArray *topLevelItems;
-@property (nonatomic, strong) NSDictionary *childrenDictionary;
+@property (nonatomic, strong) NSMutableArray *yellowPages;
+@property (nonatomic, strong) NSMutableDictionary *channelDictionary;
 @property (weak) IBOutlet NSOutlineView *bookmarkOutlineView;
 @property (strong) IBOutlet NSArrayController *channelArrayController;
 @property (weak) IBOutlet NSTableView *channelTableView;
