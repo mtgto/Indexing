@@ -9,6 +9,13 @@
 #import "MTYellowPageClient.h"
 #import <AFNetworking/AFHTTPClient.h>
 #import "Channel.h"
+#import "MTTimeIntervalFormatter.h"
+
+@interface MTYellowPageClient()
+
+- (Channel *)channelWithComponents:(NSArray *)components;
+
+@end
 
 @implementation MTYellowPageClient
 
@@ -23,19 +30,7 @@
                                               for (NSString *line in lines) {
                                                   NSArray *components = [line componentsSeparatedByString:@"<>"];
                                                   if (components.count < 18) break;
-                                                  Channel *channel = [[Channel alloc] initWithName:components[0]
-                                                                                          identity:components[1]
-                                                                                           address:components[2]
-                                                                                        contactUrl:components[3]
-                                                                                             genre:components[4]
-                                                                                     detailMessage:components[5]
-                                                                                         viewCount:[components[6] intValue]
-                                                                                        relayCount:[components[7] intValue]
-                                                                                           bitrate:[components[8] intValue]
-                                                                                       contentType:components[9]
-                                                                                         startDate:[NSDate date]//components[15]
-                                                                                     statusMessage:components[16]
-                                                                                           comment:components[17]];
+                                                  Channel *channel = [self channelWithComponents:components];
                                                   [channels addObject:channel];
                                               }
                                               success(channels);
@@ -43,6 +38,24 @@
                                           failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                               DDLogWarn(@"error = %@", error);
                                           }];
+}
+
+- (Channel *)channelWithComponents:(NSArray *)components {
+    NSDate *startDate = [MTTimeIntervalFormatter parseString:components[15]];
+    Channel *channel = [[Channel alloc] initWithName:components[0]
+                                            identity:components[1]
+                                             address:components[2]
+                                          contactUrl:components[3]
+                                               genre:components[4]
+                                       detailMessage:components[5]
+                                           viewCount:[components[6] intValue]
+                                          relayCount:[components[7] intValue]
+                                             bitrate:[components[8] intValue]
+                                         contentType:components[9]
+                                           startDate:startDate
+                                       statusMessage:components[16]
+                                             comment:components[17]];
+    return channel;
 }
 
 @end
