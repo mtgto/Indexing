@@ -26,6 +26,7 @@
 		CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */; };
 		CEC65CD91753A0100023C1C8 /* MTMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */; };
 		CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CDB1753C06A0023C1C8 /* YellowPage.m */; };
+		CEC65D0E1756612C0023C1C8 /* MTYellowPageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMainWindowController.xib; sourceTree = "<group>"; };
 		CEC65CDA1753C06A0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
 		CEC65CDB1753C06A0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
+		CEC65D0C1756612C0023C1C8 /* MTYellowPageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTYellowPageClient.h; sourceTree = "<group>"; };
+		CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTYellowPageClient.m; sourceTree = "<group>"; };
 		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -143,6 +146,8 @@
 				CEC65CB6175259560023C1C8 /* Tests */,
 				CEC65CD217539AB80023C1C8 /* Channel.h */,
 				CEC65CD317539AB90023C1C8 /* Channel.m */,
+				CEC65D0C1756612C0023C1C8 /* MTYellowPageClient.h */,
+				CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */,
 				CEC65CDA1753C06A0023C1C8 /* YellowPage.h */,
 				CEC65CDB1753C06A0023C1C8 /* YellowPage.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
@@ -347,6 +352,7 @@
 				CEC65CD417539AB90023C1C8 /* Channel.m in Sources */,
 				CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */,
 				CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */,
+				CEC65D0E1756612C0023C1C8 /* MTYellowPageClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

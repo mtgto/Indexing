@@ -7,6 +7,7 @@
 //
 
 #import "MTMainWindowController.h"
+#import "MTYellowPageClient.h"
 
 @interface MTMainWindowController ()
 
@@ -44,10 +45,17 @@
 }
 
 - (IBAction)reload:(id)sender {
-    NSDictionary *value = @{@"name": @"ch1", @"genre": @"genre1"};
-//    [self.channelArrayController addObject:value];
-    [self.channelArrayController setContent:@[value]];
-    [self.channelTableView reloadData];
+//    NSDictionary *value = @{@"name": @"ch1", @"genre": @"genre1"};
+////    [self.channelArrayController addObject:value];
+//    [self.channelArrayController setContent:@[value]];
+//    [self.channelTableView reloadData];
+    NSURL *url = [NSURL URLWithString:@"http://localhost/~user/index.txt"];
+    [[[MTYellowPageClient alloc] init] getChannelsByURL:url success:^(NSArray *channels) {
+        DDLogInfo(@"channels = %@", channels);
+        [self.channelArrayController setContent:channels];
+    } failure:^(NSError *error) {
+        DDLogWarn(@"error = %@", error);
+    }];
 }
 
 - (NSArray *)_childrenForItem:(id)item {

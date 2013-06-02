@@ -24,6 +24,7 @@
      statusMessage:(NSString *)statusMessage
            comment:(NSString *)comment {
     if (self = [super init]) {
+        self.name = name;
         self.identity = identity;
         self.address = address;
         self.contactUrl = contactUrl;
@@ -38,6 +39,12 @@
         self.comment = comment;
     }
     return self;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Channel(%@, %@, %@, %@, %@, %@, %d/%d, %dkbps, %@, %@, %@, %@",
+            self.name, self.identity, self.address, self.contactUrl, self.genre, self.detailMessage, self.viewCount,
+            self.relayCount, self.bitrate, self.contentType, self.startDate, self.statusMessage, self.comment];
 }
 
 @end
