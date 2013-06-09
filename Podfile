@@ -1,6 +1,6 @@
 platform :osx, '10.7'
 
-pod 'AFNetworking', '~> 1.2.1'
+pod 'AFNetworking', '~> 1.3.0'
 pod 'MagicalRecord', '~> 2.1'
 pod 'CocoaLumberjack', '~> 1.6.2'
 
