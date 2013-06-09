@@ -63,8 +63,8 @@
         NSURL *url = [NSURL URLWithString:@"index.txt" relativeToURL:[NSURL URLWithString:yp.url]];
         [[[MTYellowPageClient alloc] init] getChannelsByURL:url yellowPage:yp success:^(NSArray *channels) {
             DDLogInfo(@"yp[%@] channels = %@", yp.name, channels);
-            [yp removeChannels:yp.channels];
-            [yp addChannels:[NSSet setWithArray:channels]];
+            NSSet *channelSet = [NSSet setWithArray:channels];
+            yp.channels = channelSet;
         } failure:^(NSError *error) {
             DDLogWarn(@"error = %@", error);
         }];
@@ -78,6 +78,29 @@
 
 - (IBAction)deleteBookmark:(id)sender {
     [self.bookmarkOutlineView.selected MR_deleteEntity];
+}
+
+- (IBAction)play:(id)sender {
+    Channel *channel = (Channel *)[self.channelArrayController selectedObjects][0];
+    if (channel) {
+        NSString *playlistUrlString = [NSString stringWithFormat:@"http://localhost:7144/pls/%@?tip=%@", channel.identity, channel.address];
+        DDLogVerbose(@"playlistUrlString = %@", playlistUrlString);
+        NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+        NSURL *applicationUrl = [NSURL fileURLWithPath:[workspace fullPathForApplication:@"VLC"]];
+        if (applicationUrl) {
+            NSArray *arguments = @[playlistUrlString];
+            NSError *error = nil;
+            [workspace launchApplicationAtURL:applicationUrl options:0 configuration:@{NSWorkspaceLaunchConfigurationArguments: arguments} error:&error];
+
+        }
+    }
+}
+
+- (IBAction)openContactUrl:(id)sender {
+    Channel *channel = (Channel *)[self.channelArrayController selectedObjects][0];
+    if (channel) {
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:channel.contactUrl]];
+    }
 }
 
 - (NSArray *)_childrenForItem:(id)item {

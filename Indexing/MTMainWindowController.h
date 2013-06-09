@@ -24,5 +24,7 @@
 - (IBAction)reload:(id)sender;
 - (IBAction)editBookmark:(id)sender;
 - (IBAction)deleteBookmark:(id)sender;
+- (IBAction)play:(id)sender;
+- (IBAction)openContactUrl:(id)sender;
 
 @end
