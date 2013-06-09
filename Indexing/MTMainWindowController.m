@@ -59,6 +59,7 @@
 }
 
 - (IBAction)reload:(id)sender {
+    [Channel MR_truncateAll];
     for (YellowPage *yp in self.yellowPages) {
         NSURL *url = [NSURL URLWithString:@"index.txt" relativeToURL:[NSURL URLWithString:yp.url]];
         [[[MTYellowPageClient alloc] init] getChannelsByURL:url yellowPage:yp success:^(NSArray *channels) {
@@ -78,6 +79,7 @@
 
 - (IBAction)deleteBookmark:(id)sender {
     [self.bookmarkOutlineView.selected MR_deleteEntity];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (IBAction)play:(id)sender {
@@ -191,8 +193,7 @@
         // Setup the icon based on our section
         id parent = [outlineView parentForItem:item];
         NSInteger index = [_topLevelItems indexOfObject:parent];
-        NSInteger iconOffset = index % 4;
-        switch (iconOffset) {
+        switch (index) {
             case 0: {
                 result.imageView.image = [NSImage imageNamed:NSImageNameBookmarksTemplate];
                 break;

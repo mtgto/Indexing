@@ -31,5 +31,6 @@
     YellowPage *yp = [YellowPage MR_createEntity];
     yp.name = self.nameTextField.stringValue;
     yp.url = self.urlTextField.stringValue;
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 @end

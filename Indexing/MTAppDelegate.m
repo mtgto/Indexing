@@ -22,7 +22,7 @@
 {
     // Insert code here to initialize your application
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"indexing"];
+    [MagicalRecord setupAutoMigratingCoreDataStack];
     self.mainWindowController = [[MTMainWindowController alloc] initWithWindowNibName:@"MTMainWindowController"];
     [self.mainWindowController showWindow:self];
 }
@@ -76,7 +76,6 @@
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.
-    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     [MagicalRecord cleanUp];
 
     return NSTerminateNow;

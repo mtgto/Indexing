@@ -42,9 +42,13 @@
 }
 
 - (IBAction)addBookmark:(id)sender {
-    Bookmark *bookmark = [Bookmark MR_createEntity];
+    Bookmark *bookmark = self.bookmark;
+    if (!bookmark) {
+        bookmark = [Bookmark MR_createEntity];
+    }
     bookmark.name = self.name;
     bookmark.predicate = self.predicate;
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
     [self close];
 }
 
