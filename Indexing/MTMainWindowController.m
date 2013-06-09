@@ -87,10 +87,11 @@
         DDLogVerbose(@"playlistUrlString = %@", playlistUrlString);
         NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
         NSURL *applicationUrl = [NSURL fileURLWithPath:[workspace fullPathForApplication:@"VLC"]];
+        NSWorkspaceLaunchOptions options = NSWorkspaceLaunchNewInstance;
         if (applicationUrl) {
             NSArray *arguments = @[playlistUrlString];
             NSError *error = nil;
-            [workspace launchApplicationAtURL:applicationUrl options:0 configuration:@{NSWorkspaceLaunchConfigurationArguments: arguments} error:&error];
+            [workspace launchApplicationAtURL:applicationUrl options:options configuration:@{NSWorkspaceLaunchConfigurationArguments: arguments} error:&error];
 
         }
     }
