@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YellowPage.h"
 
 @interface MTYellowPageClient : NSObject
 
-- (void)getChannelsByURL:(NSURL *)url success:(void (^)(NSArray *channels))success failure:(void (^)(NSError *error))error;
+- (void)getChannelsByURL:(NSURL *)url yellowPage:(YellowPage *)yellowPage success:(void (^)(NSArray *channels))success failure:(void (^)(NSError *error))error;
 
 @end

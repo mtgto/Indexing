@@ -2,39 +2,30 @@
 //  Channel.h
 //  Indexing
 //
-//  Created by mtgto on 5/27/13.
+//  Created by mtgto on 6/9/13.
 //  Copyright (c) 2013 mtgto. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Channel : NSObject
+@class YellowPage;
 
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * identity;
-@property (nonatomic, strong) NSString * address;
-@property (nonatomic, strong) NSString * contactUrl;
-@property (nonatomic, strong) NSString * genre;
-@property (nonatomic, strong) NSString * detailMessage;
-@property (nonatomic, assign) int viewCount;
-@property (nonatomic, assign) int relayCount;
-@property (nonatomic, assign) int bitrate;
-@property (nonatomic, strong) NSString * contentType;
-@property (nonatomic, strong) NSDate * startDate;
-@property (nonatomic, strong) NSString * statusMessage;
-@property (nonatomic, strong) NSString * comment;
+@interface Channel : NSManagedObject
 
-- (id)initWithName:(NSString *)name
-          identity:(NSString *)identity
-           address:(NSString *)address
-        contactUrl:(NSString *)contactUrl
-             genre:(NSString *)genre
-     detailMessage:(NSString *)detailMessage
-         viewCount:(int)viewCount
-        relayCount:(int)relayCount
-           bitrate:(int)bitrate
-       contentType:(NSString *)contentType
-         startDate:(NSDate *)startDate
-     statusMessage:(NSString *)statusMessage
-           comment:(NSString *)comment;
+@property (nonatomic, retain) NSString * identity;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * contactUrl;
+@property (nonatomic, retain) NSString * genre;
+@property (nonatomic, retain) NSString * detailMessage;
+@property (nonatomic) int32_t viewCount;
+@property (nonatomic) int32_t relayCount;
+@property (nonatomic) int32_t bitrate;
+@property (nonatomic, retain) NSString * contentType;
+@property (nonatomic, retain) id startDate;
+@property (nonatomic, retain) NSString * statusMessage;
+@property (nonatomic, retain) NSString * comment;
+@property (nonatomic, retain) YellowPage *yellowPage;
+
 @end

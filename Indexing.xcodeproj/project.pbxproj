@@ -22,16 +22,17 @@
 		CEC65CBB175259560023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CB9175259560023C1C8 /* InfoPlist.strings */; };
 		CEC65CCE175259E10023C1C8 /* GHUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEC65CD117525CB60023C1C8 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD017525CB60023C1C8 /* MyTest.m */; };
-		CEC65CD417539AB90023C1C8 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD317539AB90023C1C8 /* Channel.m */; };
 		CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */; };
 		CEC65CD91753A0100023C1C8 /* MTMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */; };
-		CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65CDB1753C06A0023C1C8 /* YellowPage.m */; };
 		CEC65D0E1756612C0023C1C8 /* MTYellowPageClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */; };
 		CEC65D11175B90930023C1C8 /* MTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65D10175B90930023C1C8 /* MTTimeIntervalFormatter.m */; };
 		CEC65D211764652E0023C1C8 /* MTBookmarkWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65D1F1764652D0023C1C8 /* MTBookmarkWindowController.m */; };
 		CEC65D221764652E0023C1C8 /* MTBookmarkWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC65D201764652E0023C1C8 /* MTBookmarkWindowController.xib */; };
 		CEC65D28176480C30023C1C8 /* Bookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65D27176480C30023C1C8 /* Bookmark.m */; };
 		CEC6BA671764A61E00CE736D /* MTOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA661764A61D00CE736D /* MTOutlineView.m */; };
+		CEC6BA731764B9D400CE736D /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA721764B9D400CE736D /* Channel.m */; };
+		CEC6BA791764BB2600CE736D /* Channel+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA781764BB2500CE736D /* Channel+Additional.m */; };
+		CEC6BA7F1764BDA100CE736D /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA7E1764BDA000CE736D /* YellowPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,13 +62,9 @@
 		CEC65CBE175259560023C1C8 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		CEC65CCD175259E10023C1C8 /* GHUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitTestMain.m; sourceTree = "<group>"; };
 		CEC65CD017525CB60023C1C8 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
-		CEC65CD217539AB80023C1C8 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
-		CEC65CD317539AB90023C1C8 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
 		CEC65CD51753A00F0023C1C8 /* MTMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainWindowController.h; sourceTree = "<group>"; };
 		CEC65CD61753A00F0023C1C8 /* MTMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainWindowController.m; sourceTree = "<group>"; };
 		CEC65CD71753A00F0023C1C8 /* MTMainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMainWindowController.xib; sourceTree = "<group>"; };
-		CEC65CDA1753C06A0023C1C8 /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
-		CEC65CDB1753C06A0023C1C8 /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
 		CEC65D0C1756612C0023C1C8 /* MTYellowPageClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTYellowPageClient.h; sourceTree = "<group>"; };
 		CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTYellowPageClient.m; sourceTree = "<group>"; };
 		CEC65D0F175B90930023C1C8 /* MTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTimeIntervalFormatter.h; sourceTree = "<group>"; };
@@ -79,6 +76,12 @@
 		CEC65D27176480C30023C1C8 /* Bookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmark.m; sourceTree = "<group>"; };
 		CEC6BA651764A61D00CE736D /* MTOutlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTOutlineView.h; sourceTree = "<group>"; };
 		CEC6BA661764A61D00CE736D /* MTOutlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTOutlineView.m; sourceTree = "<group>"; };
+		CEC6BA711764B9D300CE736D /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		CEC6BA721764B9D400CE736D /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		CEC6BA771764BB2500CE736D /* Channel+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Channel+Additional.h"; sourceTree = "<group>"; };
+		CEC6BA781764BB2500CE736D /* Channel+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Channel+Additional.m"; sourceTree = "<group>"; };
+		CEC6BA7D1764BDA000CE736D /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
+		CEC6BA7E1764BDA000CE736D /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
 		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -164,12 +167,14 @@
 				CEC65D10175B90930023C1C8 /* MTTimeIntervalFormatter.m */,
 				CEC6BA651764A61D00CE736D /* MTOutlineView.h */,
 				CEC6BA661764A61D00CE736D /* MTOutlineView.m */,
-				CEC65CD217539AB80023C1C8 /* Channel.h */,
-				CEC65CD317539AB90023C1C8 /* Channel.m */,
 				CEC65D0C1756612C0023C1C8 /* MTYellowPageClient.h */,
 				CEC65D0D1756612C0023C1C8 /* MTYellowPageClient.m */,
-				CEC65CDA1753C06A0023C1C8 /* YellowPage.h */,
-				CEC65CDB1753C06A0023C1C8 /* YellowPage.m */,
+				CEC6BA7D1764BDA000CE736D /* YellowPage.h */,
+				CEC6BA7E1764BDA000CE736D /* YellowPage.m */,
+				CEC6BA711764B9D300CE736D /* Channel.h */,
+				CEC6BA721764B9D400CE736D /* Channel.m */,
+				CEC6BA771764BB2500CE736D /* Channel+Additional.h */,
+				CEC6BA781764BB2500CE736D /* Channel+Additional.m */,
 				CEC65D26176480C20023C1C8 /* Bookmark.h */,
 				CEC65D27176480C30023C1C8 /* Bookmark.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
@@ -373,14 +378,15 @@
 				CEC65C5C1751E6CD0023C1C8 /* MTAppDelegate.m in Sources */,
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
 				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
-				CEC65CD417539AB90023C1C8 /* Channel.m in Sources */,
 				CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */,
-				CEC65CDC1753C06A0023C1C8 /* YellowPage.m in Sources */,
 				CEC65D0E1756612C0023C1C8 /* MTYellowPageClient.m in Sources */,
 				CEC65D11175B90930023C1C8 /* MTTimeIntervalFormatter.m in Sources */,
 				CEC65D211764652E0023C1C8 /* MTBookmarkWindowController.m in Sources */,
 				CEC65D28176480C30023C1C8 /* Bookmark.m in Sources */,
 				CEC6BA671764A61E00CE736D /* MTOutlineView.m in Sources */,
+				CEC6BA731764B9D400CE736D /* Channel.m in Sources */,
+				CEC6BA791764BB2600CE736D /* Channel+Additional.m in Sources */,
+				CEC6BA7F1764BDA100CE736D /* YellowPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

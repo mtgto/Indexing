@@ -79,12 +79,15 @@
 								<characters key="NS.bytes">7357A474-FAA9-4EDF-815A-416C9E7D8C1D</characters>
 							</object>
 							<string key="NSToolbarItemLabel">Search...</string>
-							<string key="NSToolbarItemPaletteLabel">Search</string>
+							<string key="NSToolbarItemPaletteLabel">Search (NOT IMPLEMENTED)</string>
 							<nil key="NSToolbarItemToolTip"/>
 							<object class="NSSearchField" key="NSToolbarItemView" id="238261910">
-								<nil key="NSNextResponder"/>
+								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{0, 14}, {96, 22}}</string>
+								<string key="NSFrame">{{30, 14}, {96, 22}}</string>
+								<reference key="NSSuperview"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSSearchFieldCell" key="NSCell" id="696621451">
@@ -304,6 +307,7 @@
 											<array class="NSMutableArray" key="NSSubviews"/>
 											<string key="NSFrameSize">{148, 333}</string>
 											<reference key="NSSuperview" ref="485556613"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="924329590"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<bool key="NSEnabled">YES</bool>
@@ -406,6 +410,7 @@
 									</array>
 									<string key="NSFrame">{{1, 1}, {148, 333}}</string>
 									<reference key="NSSuperview" ref="595383528"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="682978220"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="682978220"/>
@@ -417,6 +422,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 									<reference key="NSSuperview" ref="595383528"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="966985489"/>
 									<string key="NSReuseIdentifierKey">_NS:15</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -429,6 +435,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{1, 119}, {238, 15}}</string>
 									<reference key="NSSuperview" ref="595383528"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="214051233"/>
 									<string key="NSReuseIdentifierKey">_NS:60</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -440,6 +447,7 @@
 							</array>
 							<string key="NSFrame">{{20, 20}, {150, 335}}</string>
 							<reference key="NSSuperview" ref="914934427"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="485556613"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133682</int>
@@ -464,6 +472,7 @@
 											<int key="NSvFlags">256</int>
 											<string key="NSFrameSize">{466, 317}</string>
 											<reference key="NSSuperview" ref="416967183"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="395056104"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<bool key="NSEnabled">YES</bool>
@@ -474,6 +483,7 @@
 												<int key="NSvFlags">256</int>
 												<string key="NSFrameSize">{466, 17}</string>
 												<reference key="NSSuperview" ref="980019924"/>
+												<reference key="NSWindow"/>
 												<reference key="NSNextKeyView" ref="416967183"/>
 												<string key="NSReuseIdentifierKey">_NS:16</string>
 												<reference key="NSTableView" ref="759651840"/>
@@ -691,6 +701,7 @@
 									</array>
 									<string key="NSFrame">{{1, 17}, {466, 317}}</string>
 									<reference key="NSSuperview" ref="214051233"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="759651840"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="759651840"/>
@@ -702,6 +713,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 									<reference key="NSSuperview" ref="214051233"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="460555406"/>
 									<string key="NSReuseIdentifierKey">_NS:58</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -715,6 +727,7 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{1, 309}, {416, 16}}</string>
 									<reference key="NSSuperview" ref="214051233"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:60</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -731,6 +744,7 @@
 									</array>
 									<string key="NSFrame">{{1, 0}, {466, 17}}</string>
 									<reference key="NSSuperview" ref="214051233"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="126944102"/>
 									<string key="NSReuseIdentifierKey">_NS:15</string>
 									<reference key="NSDocView" ref="126944102"/>
@@ -740,6 +754,7 @@
 							</array>
 							<string key="NSFrame">{{178, 20}, {468, 335}}</string>
 							<reference key="NSSuperview" ref="914934427"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="980019924"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133682</int>
@@ -755,6 +770,7 @@
 					</array>
 					<string key="NSFrameSize">{666, 375}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="595383528"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
@@ -777,19 +793,19 @@
 			<object class="NSCustomObject" id="358484641">
 				<string key="NSClassName">MTBookmarkWindowController</string>
 			</object>
-			<object class="NSMenu" id="105019452">
+			<object class="NSMenu" id="742251781">
 				<string key="NSTitle"/>
 				<array class="NSMutableArray" key="NSMenuItems">
-					<object class="NSMenuItem" id="671581198">
-						<reference key="NSMenu" ref="105019452"/>
+					<object class="NSMenuItem" id="95131031">
+						<reference key="NSMenu" ref="742251781"/>
 						<string key="NSTitle">Edit...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="243984851"/>
 						<reference key="NSMixedImage" ref="561618314"/>
 					</object>
-					<object class="NSMenuItem" id="1035844761">
-						<reference key="NSMenu" ref="105019452"/>
+					<object class="NSMenuItem" id="343852245">
+						<reference key="NSMenu" ref="742251781"/>
 						<string key="NSTitle">Delete</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -845,7 +861,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">editBookmark</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="671581198"/>
+						<reference key="destination" ref="95131031"/>
 					</object>
 					<int key="connectionID">218</int>
 				</object>
@@ -853,7 +869,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">editBookmark:</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="671581198"/>
+						<reference key="destination" ref="95131031"/>
 					</object>
 					<int key="connectionID">219</int>
 				</object>
@@ -861,7 +877,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">deleteBookmark:</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="1035844761"/>
+						<reference key="destination" ref="343852245"/>
 					</object>
 					<int key="connectionID">220</int>
 				</object>
@@ -869,7 +885,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">bookmarkMenu</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="105019452"/>
+						<reference key="destination" ref="742251781"/>
 					</object>
 					<int key="connectionID">221</int>
 				</object>
@@ -901,7 +917,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">menu</string>
 						<reference key="source" ref="682978220"/>
-						<reference key="destination" ref="105019452"/>
+						<reference key="destination" ref="742251781"/>
 					</object>
 					<int key="connectionID">222</int>
 				</object>
@@ -1927,22 +1943,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">212</int>
-						<reference key="object" ref="105019452"/>
+						<reference key="object" ref="742251781"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="671581198"/>
-							<reference ref="1035844761"/>
+							<reference ref="95131031"/>
+							<reference ref="343852245"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">213</int>
-						<reference key="object" ref="671581198"/>
-						<reference key="parent" ref="105019452"/>
+						<reference key="object" ref="95131031"/>
+						<reference key="parent" ref="742251781"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">214</int>
-						<reference key="object" ref="1035844761"/>
-						<reference key="parent" ref="105019452"/>
+						<reference key="object" ref="343852245"/>
+						<reference key="parent" ref="742251781"/>
 					</object>
 				</array>
 			</object>
@@ -2066,7 +2082,112 @@
 			<nil key="sourceID"/>
 			<int key="maxID">223</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">MTBookmarkWindowController</string>
+					<string key="superclassName">NSWindowController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="addBookmark:">id</string>
+						<string key="cancel:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="addBookmark:">
+							<string key="name">addBookmark:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="cancel:">
+							<string key="name">cancel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MTBookmarkWindowController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MTMainWindowController</string>
+					<string key="superclassName">NSWindowController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="deleteBookmark:">id</string>
+						<string key="editBookmark:">id</string>
+						<string key="reload:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="deleteBookmark:">
+							<string key="name">deleteBookmark:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="editBookmark:">
+							<string key="name">editBookmark:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="reload:">
+							<string key="name">reload:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="bookmarkMenu">NSMenu</string>
+						<string key="bookmarkOutlineView">MTOutlineView</string>
+						<string key="bookmarkWindowController">MTBookmarkWindowController</string>
+						<string key="channelArrayController">NSArrayController</string>
+						<string key="channelTableView">NSTableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="bookmarkMenu">
+							<string key="name">bookmarkMenu</string>
+							<string key="candidateClassName">NSMenu</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="bookmarkOutlineView">
+							<string key="name">bookmarkOutlineView</string>
+							<string key="candidateClassName">MTOutlineView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="bookmarkWindowController">
+							<string key="name">bookmarkWindowController</string>
+							<string key="candidateClassName">MTBookmarkWindowController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="channelArrayController">
+							<string key="name">channelArrayController</string>
+							<string key="candidateClassName">NSArrayController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="channelTableView">
+							<string key="name">channelTableView</string>
+							<string key="candidateClassName">NSTableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MTMainWindowController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MTOutlineView</string>
+					<string key="superclassName">NSOutlineView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MTOutlineView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MTTimeIntervalFormatter</string>
+					<string key="superclassName">NSFormatter</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MTTimeIntervalFormatter.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSLayoutConstraint</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

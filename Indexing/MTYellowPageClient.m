@@ -13,13 +13,13 @@
 
 @interface MTYellowPageClient()
 
-- (Channel *)channelWithComponents:(NSArray *)components;
+- (Channel *)channelByComponents:(NSArray *)components yellowPage:(YellowPage *)yellowPage;
 
 @end
 
 @implementation MTYellowPageClient
 
-- (void)getChannelsByURL:(NSURL *)url success:(void (^)(NSArray *channels))success failure:(void (^)(NSError *error))error {
+- (void)getChannelsByURL:(NSURL *)url yellowPage:(YellowPage *)yellowPage success:(void (^)(NSArray *channels))success failure:(void (^)(NSError *error))error {
     [[AFHTTPClient clientWithBaseURL:url] getPath:url.path
                                        parameters:nil
                                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -30,7 +30,7 @@
                                               for (NSString *line in lines) {
                                                   NSArray *components = [line componentsSeparatedByString:@"<>"];
                                                   if (components.count < 18) break;
-                                                  Channel *channel = [self channelWithComponents:components];
+                                                  Channel *channel = [self channelByComponents:components yellowPage:yellowPage];
                                                   [channels addObject:channel];
                                               }
                                               success(channels);
@@ -40,21 +40,23 @@
                                           }];
 }
 
-- (Channel *)channelWithComponents:(NSArray *)components {
+- (Channel *)channelByComponents:(NSArray *)components yellowPage:(YellowPage *)yellowPage {
     NSDate *startDate = [MTTimeIntervalFormatter parseString:components[15]];
-    Channel *channel = [[Channel alloc] initWithName:components[0]
-                                            identity:components[1]
-                                             address:components[2]
-                                          contactUrl:components[3]
-                                               genre:components[4]
-                                       detailMessage:components[5]
-                                           viewCount:[components[6] intValue]
-                                          relayCount:[components[7] intValue]
-                                             bitrate:[components[8] intValue]
-                                         contentType:components[9]
-                                           startDate:startDate
-                                       statusMessage:components[16]
-                                             comment:components[17]];
+    Channel *channel = [Channel MR_createEntity];
+    channel.yellowPage = yellowPage;
+    channel.name = components[0];
+    channel.identity = components[1];
+    channel.address  = components[2];
+    channel.contactUrl = components[3];
+    channel.genre = components[4];
+    channel.detailMessage = components[5];
+    channel.viewCount = [components[6] intValue];
+    channel.relayCount = [components[7] intValue];
+    channel.bitrate = [components[8] intValue];
+    channel.contentType = components[9];
+    channel.startDate = startDate;
+    channel.statusMessage = components[16];
+    channel.comment = components[17];
     return channel;
 }
 

@@ -10,6 +10,7 @@
 #import "MTYellowPageClient.h"
 #import "YellowPage.h"
 #import "Bookmark.h"
+#import "Channel.h"
 
 @interface MTMainWindowController ()
 
@@ -35,7 +36,6 @@
     self.topLevelItems = @[@"YP", @"Bookmarks"];
     self.yellowPages = [[YellowPage MR_findAll] mutableCopy];
     self.bookmarks = [[Bookmark MR_findAll] mutableCopy];
-    self.channelDictionary = [NSMutableDictionary dictionary];
     [self.bookmarkOutlineView sizeLastColumnToFit];
     [self.bookmarkOutlineView reloadData];
     [self.bookmarkOutlineView setFloatsGroupRows:NO];
@@ -61,10 +61,10 @@
 - (IBAction)reload:(id)sender {
     for (YellowPage *yp in self.yellowPages) {
         NSURL *url = [NSURL URLWithString:@"index.txt" relativeToURL:[NSURL URLWithString:yp.url]];
-        [[[MTYellowPageClient alloc] init] getChannelsByURL:url success:^(NSArray *channels) {
+        [[[MTYellowPageClient alloc] init] getChannelsByURL:url yellowPage:yp success:^(NSArray *channels) {
             DDLogInfo(@"yp[%@] channels = %@", yp.name, channels);
-            self.channelDictionary[yp.name] = channels;
-            //[self.channelArrayController setContent:channels];
+            [yp removeChannels:yp.channels];
+            [yp addChannels:[NSSet setWithArray:channels]];
         } failure:^(NSError *error) {
             DDLogWarn(@"error = %@", error);
         }];
@@ -185,9 +185,16 @@
 #pragma mark - Notification
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
     DDLogInfo(@"outlineViewSelectionDidChange:%@", [self.bookmarkOutlineView itemAtRow:self.bookmarkOutlineView.selectedRow]);
-    YellowPage *yp = [self.bookmarkOutlineView itemAtRow:self.bookmarkOutlineView.selectedRow];
-    NSArray *channels = self.channelDictionary[yp.name];
-    if (channels) {
+    id item = [self.bookmarkOutlineView itemAtRow:self.bookmarkOutlineView.selectedRow];
+    if ([item isKindOfClass:[YellowPage class]]) {
+        YellowPage *yp = (YellowPage *)item;
+        NSArray *channels = [yp.channels allObjects];
+        if (channels) {
+            [self.channelArrayController setContent:channels];
+        }
+    } else if ([item isKindOfClass:[Bookmark class]]) {
+        Bookmark *bookmark = (Bookmark *)item;
+        NSArray *channels = [Channel MR_findAllWithPredicate:bookmark.predicate];
         [self.channelArrayController setContent:channels];
     }
 }

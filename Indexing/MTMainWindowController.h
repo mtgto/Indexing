@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSArray *topLevelItems;
 @property (nonatomic, strong) NSMutableArray *yellowPages;
 @property (nonatomic, strong) NSMutableArray *bookmarks;
-@property (nonatomic, strong) NSMutableDictionary *channelDictionary;
 @property (weak) IBOutlet MTOutlineView *bookmarkOutlineView;
 @property (strong) IBOutlet NSArrayController *channelArrayController;
 @property (weak) IBOutlet NSTableView *channelTableView;
