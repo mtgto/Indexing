@@ -9,6 +9,7 @@
 #import "MTMainWindowController.h"
 #import "MTYellowPageClient.h"
 #import "YellowPage.h"
+#import "Bookmark.h"
 
 @interface MTMainWindowController ()
 
@@ -33,6 +34,7 @@
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     self.topLevelItems = @[@"YP", @"Bookmarks"];
     self.yellowPages = [[YellowPage MR_findAll] mutableCopy];
+    self.bookmarks = [[Bookmark MR_findAll] mutableCopy];
     self.channelDictionary = [NSMutableDictionary dictionary];
     [self.bookmarkOutlineView sizeLastColumnToFit];
     [self.bookmarkOutlineView reloadData];
@@ -69,12 +71,25 @@
     }
 }
 
+- (IBAction)editBookmark:(id)sender {
+    self.bookmarkWindowController.bookmark = self.bookmarkOutlineView.selected;
+    [self.bookmarkWindowController showWindow:self];
+}
+
+- (IBAction)deleteBookmark:(id)sender {
+    [self.bookmarkOutlineView.selected MR_deleteEntity];
+}
+
 - (NSArray *)_childrenForItem:(id)item {
-    NSArray *children;
+    NSArray *children = nil;
     if (item == nil) {
         children = self.topLevelItems;
-    } else {
+    } else if ([item isEqual:@"YP"]){
         children = self.yellowPages;
+    } else if ([item isEqual:@"Bookmarks"]){
+        children = self.bookmarks;
+    } else {
+        DDLogError(@"Unsupported item: %@", item);
     }
     return children;
 }
@@ -140,27 +155,26 @@
         // The cell is setup in IB. The textField and imageView outlets are properly setup.
         // Special attributes are automatically applied by NSTableView/NSOutlineView for the source list
         NSTableCellView *result = [outlineView makeViewWithIdentifier:@"DataCell" owner:self];
-        YellowPage *yp = (YellowPage *)item;
-        result.textField.stringValue = yp.name;
+        if ([item isKindOfClass:[YellowPage class]]) {
+            YellowPage *yp = (YellowPage *)item;
+            result.textField.stringValue = yp.name;
+        } else if ([item isKindOfClass:[Bookmark class]]) {
+            Bookmark *bookmark = (Bookmark *)item;
+            result.textField.stringValue = bookmark.name;
+            result.menu = self.bookmarkMenu;
+            result.textField.menu = self.bookmarkMenu;
+        }
         // Setup the icon based on our section
         id parent = [outlineView parentForItem:item];
         NSInteger index = [_topLevelItems indexOfObject:parent];
         NSInteger iconOffset = index % 4;
         switch (iconOffset) {
             case 0: {
-                result.imageView.image = [NSImage imageNamed:NSImageNameIconViewTemplate];
+                result.imageView.image = [NSImage imageNamed:NSImageNameBookmarksTemplate];
                 break;
             }
             case 1: {
-                result.imageView.image = [NSImage imageNamed:NSImageNameHomeTemplate];
-                break;
-            }
-            case 2: {
-                result.imageView.image = [NSImage imageNamed:NSImageNameQuickLookTemplate];
-                break;
-            }
-            case 3: {
-                result.imageView.image = [NSImage imageNamed:NSImageNameSlideshowTemplate];
+                result.imageView.image = [NSImage imageNamed:NSImageNameSmartBadgeTemplate];
                 break;
             }
         }
@@ -180,7 +194,8 @@
 
 - (void)managedObjectChanged:(NSNotification *)notification {
     DDLogInfo(@"managedObjectChanged: %@", [notification userInfo]);
-    self.yellowPages = [NSMutableArray arrayWithArray:[YellowPage MR_findAll]];
+    self.yellowPages = [[YellowPage MR_findAll] mutableCopy];
+    self.bookmarks = [[Bookmark MR_findAll] mutableCopy];
     [self.bookmarkOutlineView reloadData];
 }
 
