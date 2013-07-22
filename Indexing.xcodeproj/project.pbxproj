@@ -33,6 +33,7 @@
 		CEC6BA731764B9D400CE736D /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA721764B9D400CE736D /* Channel.m */; };
 		CEC6BA791764BB2600CE736D /* Channel+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA781764BB2500CE736D /* Channel+Additional.m */; };
 		CEC6BA7F1764BDA100CE736D /* YellowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BA7E1764BDA000CE736D /* YellowPage.m */; };
+		CEEE7D7E179CB3FB00F0B45C /* MTZeroWidthSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEE7D7D179CB3FB00F0B45C /* MTZeroWidthSplitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,8 @@
 		CEC6BA781764BB2500CE736D /* Channel+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Channel+Additional.m"; sourceTree = "<group>"; };
 		CEC6BA7D1764BDA000CE736D /* YellowPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowPage.h; sourceTree = "<group>"; };
 		CEC6BA7E1764BDA000CE736D /* YellowPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowPage.m; sourceTree = "<group>"; };
+		CEEE7D7C179CB3FB00F0B45C /* MTZeroWidthSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZeroWidthSplitView.h; sourceTree = "<group>"; };
+		CEEE7D7D179CB3FB00F0B45C /* MTZeroWidthSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZeroWidthSplitView.m; sourceTree = "<group>"; };
 		F3BD531D55C14A08B306A924 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -163,6 +166,8 @@
 				CEC65D1E1764652D0023C1C8 /* MTBookmarkWindowController.h */,
 				CEC65D1F1764652D0023C1C8 /* MTBookmarkWindowController.m */,
 				CEC65D201764652E0023C1C8 /* MTBookmarkWindowController.xib */,
+				CEEE7D7C179CB3FB00F0B45C /* MTZeroWidthSplitView.h */,
+				CEEE7D7D179CB3FB00F0B45C /* MTZeroWidthSplitView.m */,
 				CEC65D0F175B90930023C1C8 /* MTTimeIntervalFormatter.h */,
 				CEC65D10175B90930023C1C8 /* MTTimeIntervalFormatter.m */,
 				CEC6BA651764A61D00CE736D /* MTOutlineView.h */,
@@ -387,6 +392,7 @@
 				CEC6BA731764B9D400CE736D /* Channel.m in Sources */,
 				CEC6BA791764BB2600CE736D /* Channel+Additional.m in Sources */,
 				CEC6BA7F1764BDA100CE736D /* YellowPage.m in Sources */,
+				CEEE7D7E179CB3FB00F0B45C /* MTZeroWidthSplitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
