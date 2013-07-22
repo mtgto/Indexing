@@ -1,7 +1,7 @@
 Indexing
 ====
 Indexing is a Mac Application.
-It is an channel browswer by accessing to index.txt, which is used in PeerCast.
+It browsing PeerCast channels by accessing to index.txt.
 
 # Screenshots
 ![Image](./screenshot01.jpg)
@@ -20,4 +20,5 @@ For test, using these libraries.
 
 # License
 Indexing is licensed by under the GNU GPL v3.
+See [Detail](./LICENSE).
 
