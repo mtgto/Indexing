@@ -33,6 +33,9 @@
     [super windowDidLoad];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+
+    // When you use NSWindowController, set setWindowFrameAutosaveName instead of NSWindow's autosave in xib.
+    self.windowFrameAutosaveName = @"mainwindow";
     self.topLevelItems = @[@"YP", @"Bookmarks"];
     self.yellowPages = [[YellowPage MR_findAll] mutableCopy];
     self.bookmarks = [[Bookmark MR_findAll] mutableCopy];
