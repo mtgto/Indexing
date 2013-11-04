@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D7176A0B13844138F972476 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BF258C7D334BCF950CB1EE /* libPods-Tests.a */; };
 		42953255FB80435480383813 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 563DE9D639BC439D83F36EC0 /* libPods.a */; };
+		CE08077B18277B65002E9686 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = CE08077918277B65002E9686 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE08077C18278063002E9686 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC65C4C1751E6CD0023C1C8 /* CoreData.framework */; };
 		CEC65C491751E6CD0023C1C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC65C481751E6CD0023C1C8 /* Cocoa.framework */; };
 		CEC65C531751E6CD0023C1C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEC65C511751E6CD0023C1C8 /* InfoPlist.strings */; };
 		CEC65C551751E6CD0023C1C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC65C541751E6CD0023C1C8 /* main.m */; };
@@ -40,6 +42,8 @@
 		563DE9D639BC439D83F36EC0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8254BF72E1C5457A955CBFAA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A4BF258C7D334BCF950CB1EE /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE08077918277B65002E9686 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		CE08077A18277B65002E9686 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		CEC65C451751E6CD0023C1C8 /* Indexing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Indexing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC65C481751E6CD0023C1C8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CEC65C4B1751E6CD0023C1C8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE08077C18278063002E9686 /* CoreData.framework in Frameworks */,
 				CEC65C491751E6CD0023C1C8 /* Cocoa.framework in Frameworks */,
 				42953255FB80435480383813 /* libPods.a in Frameworks */,
 			);
@@ -182,6 +187,8 @@
 				CEC6BA781764BB2500CE736D /* Channel+Additional.m */,
 				CEC65D26176480C20023C1C8 /* Bookmark.h */,
 				CEC65D27176480C30023C1C8 /* Bookmark.m */,
+				CE08077A18277B65002E9686 /* GTMNSString+HTML.h */,
+				CE08077918277B65002E9686 /* GTMNSString+HTML.m */,
 				CEC65C601751E6CD0023C1C8 /* Indexing.xcdatamodeld */,
 				CEC65CB6175259560023C1C8 /* Tests */,
 				CEC65C4F1751E6CD0023C1C8 /* Supporting Files */,
@@ -272,6 +279,11 @@
 				CLASSPREFIX = MT;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = mtgto;
+				TargetAttributes = {
+					CEC65C441751E6CD0023C1C8 = {
+						DevelopmentTeam = W3A6B7FDC7;
+					};
+				};
 			};
 			buildConfigurationList = CEC65C401751E6CD0023C1C8 /* Build configuration list for PBXProject "Indexing" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -381,6 +393,7 @@
 			files = (
 				CEC65C551751E6CD0023C1C8 /* main.m in Sources */,
 				CEC65C5C1751E6CD0023C1C8 /* MTAppDelegate.m in Sources */,
+				CE08077B18277B65002E9686 /* GTMNSString+HTML.m in Sources */,
 				CEC65C621751E6CD0023C1C8 /* Indexing.xcdatamodeld in Sources */,
 				CEC65C70175246760023C1C8 /* MTPreferencesWindowController.m in Sources */,
 				CEC65CD81753A0100023C1C8 /* MTMainWindowController.m in Sources */,
@@ -510,7 +523,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Indexing/Indexing-Prefix.pch";
 				INFOPLIST_FILE = "Indexing/Indexing-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -524,7 +537,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Indexing/Indexing-Prefix.pch";
 				INFOPLIST_FILE = "Indexing/Indexing-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
